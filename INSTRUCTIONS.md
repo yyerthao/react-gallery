@@ -8,15 +8,18 @@ There is no database component to base mode. All data is stored in an array on t
 
 Running the server code requires `nodemon`. If you don't already have `nodemon`, install it globally with `npm install nodemon --global`.
 
-```
+
+``` 
 npm install
 npm run server
+
 ```
 
 Now that the server is running, open a new terminal tab with `cmd + t` and start the react client app.
 
 ```
 npm run client
+
 ```
 
 Between the server and client, you'll need two terminal tabs! Because we're using `nodemon`, both our client side and server side will automatically spin back up when changes are made!
@@ -50,6 +53,13 @@ To practice passing values through `props` in React, you will build the gallery 
     - Display the number likes for each item and include a like button.
     - When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
     - Update the gallery each time a like button is clicked.
+
+
+
+
+
+
+
 
 
 
