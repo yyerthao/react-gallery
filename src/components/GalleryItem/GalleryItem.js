@@ -4,8 +4,7 @@ class GalleryItem extends Component {
   render() {
     return (
         <>  
-        <img src="images/sunboys.jpg"/>
-        <img className="sungirls" src="images/sungirls.jpg"/>
+        <h1>Hello</h1>
         </>
     );
   }

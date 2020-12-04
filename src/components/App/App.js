@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import GalleryItem from '../GalleryItem/GalleryItem';
+import GalleryList from '../GalleryList/GalleryList';
 
 class App extends Component {
 
@@ -13,10 +13,10 @@ state = {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Yer's Gallery</h1>
-        </header>
+        </header>ç
         <br/>
         <p>GALLERY GOES HERE</p>
-        <GalleryItem />
+        <GalleryList galleryList={this.state.imageList}/>
       </div>
     );
   }
