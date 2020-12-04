@@ -21,3 +21,14 @@
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
+
+
+img{
+  width: 600px;
+  height: 300px;
+}
+
+.sungirls{
+  width: 340px;
+  height: 300px;
+}

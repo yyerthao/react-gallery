@@ -1,15 +1,15 @@
 
 ### - SERVER 
-[] - `npm install nodemon --global` will run `nodemon`
-[] - GET already provided ( base mode no need to change)
+[x] - `npm install nodemon --global` will run `nodemon`
+[x] - GET already provided ( base mode no need to change)
 [] - POST 
-[] - PUT already provided ( base mode no need to change )
+[x] - PUT already provided ( base mode no need to change )
 [] - DELETE 
 [] - modify `server/modules/data.js` to include `id`, `title`,      `description`, and `path for` each of your images.
         (Each `id` should be a unique number i.e. 1, 2, 3, 4, 5).   
 
 ### - CLIENT APP.JS
-[] - import axios from 'axios';
+[x] - import axios from 'axios';
 [] - axios.get('/gallery')
 [] - axios.post('/gallery') 
 [] - axios.put('/gallery/like/:id') 
@@ -26,5 +26,5 @@
 
 
 ###
-map()
+
 
