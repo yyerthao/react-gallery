@@ -4,6 +4,7 @@ import GalleryList from '../GalleryList/GalleryList';
 
 class App extends Component {
 
+// 
 state = {
   imageList: []
 }
@@ -13,13 +14,16 @@ state = {
       <div className="App">
         <header className="App-header">
           <h1 className="App-title">Yer's Gallery</h1>
-        </header>ç
+        </header>
         <br/>
-        <p>GALLERY GOES HERE</p>
-        <GalleryList galleryList={this.state.imageList}/>
+        <p>“Wherever life plants you, bloom with grace.” – Old French Proverb</p>
+        {/* <GalleryList galleryList={this.state.imageList}/> */}
+        {/* GalleryList is a component, calling it here, need to utilize props to pass array imageList to there */}
+        <GalleryList list={this.state.imageList}/>
       </div>
     );
   }
 }
+
 
 export default App;
