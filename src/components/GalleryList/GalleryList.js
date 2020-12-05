@@ -7,12 +7,13 @@ class GalleryList extends Component{
     render(){
         return(
         <>
-        <img className="sungirls" src="images/sungirls.jpg" alt="Sun flower gals"/>
+        <img className="sungirls" src="images/sungirls.jpg" alt="Big Lake, MN Sunflower field"/>
         <br></br>
-        <GalleryItem />
+        <GalleryItem photo={this.props.photo}/>
         </>
         )
     }
 }
+
 
 export default GalleryList;

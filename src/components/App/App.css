@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  font-family: 'Playfair Display', serif;
+font-family: 'Playfair Display', serif;
 }
 
 .App-header {
@@ -27,11 +27,6 @@ img{
   border-radius: 0.5rem;
 }
 
-.sunboys{
-  width: 340;
-  height: 320px;
-}
-
 .sungirls{
   width: 340px;
   height: 320px;
@@ -40,3 +35,4 @@ img{
 button{
   margin-top: 0.5rem;
 }
+

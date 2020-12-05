@@ -18,7 +18,7 @@ state = {
         <br/>
         <p>“Wherever life plants you, bloom with grace.” – Old French Proverb</p>
         {/* <GalleryList galleryList={this.state.imageList}/> */}
-        {/* GalleryList is a component, calling it here, need to utilize props to pass array imageList to there */}
+        {/* GalleryList is a component, utilize props to pass array imageList to there */}
         <GalleryList list={this.state.imageList}/>
       </div>
     );
