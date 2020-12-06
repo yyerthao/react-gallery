@@ -7,7 +7,8 @@ class App extends Component {
 
 state = {
   imageList: [], // at this point, imageList array has no data
-  unliked: false // boolean created 
+  unliked: false, // boolean created 
+
 }
 
 // readyNow function, start of react life cycle
@@ -20,18 +21,17 @@ state = {
   getImages = () => {
     axios.get('/gallery')
     // axios will GET data from server
-    // inside server.js, there is no GET, only an app.use with /gallery ('/gallery', gallery) 
-    // axios will then travel to gallery.router.js because at the top of server.js, is
-    //      - const gallery = require('./routes/gallery.router.js');
+    // inside server.js, there is no GET, only an app.use with match url /gallery ('/gallery', gallery)
+    // axios will then travel to gallery.router.js because at the top of server.js, is a
+    //      - const gallery = require('./routes/gallery.router.js'). This const is inside app.use()
     // inside gallery.router.js, we need to find a get with a / 
     //      - router.get('/', (req, res) => {
     //      res.send(galleryItems);
     //      }); // END GET Route
     // - we want to send galleryItems, which is a const required at top of gallery.router.js
     //      - const galleryItems = require('../modules/gallery.data');
-    // - INSIDE gallery.data.js, we will have our galleryItems array, which is essentially our data
-      .then(response => {
-        // store galleryItems array into state after it comes back
+    // - INSIDE gallery.data.js, we will have our galleryItems array, which is essentially our data to renders
+      .then(response => { // galleryItems array becomes our response, storing it into state
         this.setState({
           imageList: response.data // setting imageList to be our data
         })
@@ -47,7 +47,12 @@ state = {
     console.log('Liked a photo');
     this.setState({
       liked: true
+
     })
+  }
+
+  countLikes = () => {
+    console.log('Counting likes');
   }
 
   render() {
@@ -62,7 +67,8 @@ state = {
         {/* GalleryList is a component, list is our prop, it is taco.. we are storing our imageList into this prop variable, 
         at this point, imageList already has our galleryItems array of photo data in it..*/}
         <GalleryList list={this.state.imageList}
-                photoChange={this.photoChange}/>
+                photoChange={this.photoChange}
+                countLikes={this.countLikes}/>
                 </div>
       </div>
     );
