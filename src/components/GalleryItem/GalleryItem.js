@@ -6,21 +6,29 @@ import React, { Component } from 'react';
 class GalleryItem extends Component {
 
     state = {
-        unliked: false
+        unliked: false,
+        counter: 0
     }
 
     // this is a function, will set the state of unmasked to be flipped
     toggleMask = () => {
         this.setState({
-            unliked: !this.state.unliked // flip the boolean using ! NOT 
+            unliked: !this.state.unliked, // flip the boolean using ! NOT 
+            [this.state.counter]: this.state.count + 1
         })
     }
 
+    // likeCounts = () => {
+    //     this.setState({
+    //         [this.state.counter]: this.state.count + 1
+    //     })
+    // }
 
   render() {
+      
     return (
         <>  
-            <img src={this.props.photo.path} alt="Fun in the sun"></img>
+            <img src={this.props.photo.path} alt={this.props.photo.description}></img>
             <button onClick={this.toggleMask}>
             {this.state.unliked? `Like!` : `Unlike!`}
             </button>
