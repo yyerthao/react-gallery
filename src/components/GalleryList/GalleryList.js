@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import GalleryItem from '../GalleryItem/GalleryItem';
+import './GalleryList.css';
 
 
 class GalleryList extends Component{
@@ -9,15 +10,15 @@ class GalleryList extends Component{
         {/* list (contains imageList array) gets pass through from parent App.js*/}
         {/* map is a functions method, sort of like a for loop, which utilizes a taco, 
         in this case, image, to iterate through the our imageList array to render to DOM*/}
-
-            { this.props.list.map((item) => 
-                // The left side of the = is the name of the prop
-                // It must matchin this.props.x in the component
-                // key prop MUSt be at this level, not in component
-                <GalleryItem photo={item} key={item.id}
-                                photoChange={this.props.photoChange}/>
+            <div className="container">
+            { this.props.list.map((image) => 
+                <GalleryItem 
+                            image={image} key={image.id}
+                            photoChange={this.props.photoChange}
+                            updateImage={this.updateImage}/>
                 )
             }
+            </div>
 
         </>
         ) // end return

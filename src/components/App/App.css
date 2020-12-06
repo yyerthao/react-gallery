@@ -3,13 +3,8 @@
   font-family: 'Playfair Display', serif;
 }
 
-.container{
-    margin-right: 10rem;
-    margin-left: 10rem;
-}
-
 .App-header {
-  background-color: rgb(43, 42, 38);
+  background-color: rgb(232, 212, 101);
   height: 70px;
   padding: 20px;
   color: rgb(255, 255, 255);
@@ -27,23 +22,5 @@
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
-
-img{
-  width: 220px;
-  height: 180px;
-  border-radius: 0.2rem;
-  margin: 0;
-  padding: 0;
-  border: 2px grey;
-}
-
-button{
-  width: 220px;
-  height: 180px;
-  border-radius: 0.2rem;
-  margin: 0;
-  padding: 0;
-  border: 2px grey;
 }
 

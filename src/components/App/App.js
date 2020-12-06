@@ -51,6 +51,18 @@ state = {
     })
   }
 
+  updateImage = (id) => { // notes that the event was pressed 'onClick' and the id is passed in
+    axios.put(`/gallery/${this.state.imageList.id}`) // the id is sent as the params to the server-side
+      .then((response) => {
+        console.log('Response:', response); // we get an OK back from the DB that it was updated
+        this.getImages() // call getImages again to update the DOM
+      })
+      .catch((error) => {
+        alert('Something bad happened');
+        console.log('Error', error)
+      })
+  }
+
 
   render() {
     return (
@@ -58,14 +70,13 @@ state = {
         <header className="App-header">
           <h1 className="App-title">Yer's Gallery</h1>
         </header>
-        <div className="container">
         <p>&nbsp;{/* INSERT QUOTE HERE LATER */}</p>
         
         {/* GalleryList is a component, list is our prop, it is taco.. we are storing our imageList into this prop variable, 
         at this point, imageList already has our galleryItems array of photo data in it..*/}
         <GalleryList list={this.state.imageList}
-                photoChange={this.photoChange}/>
-                </div>
+                photoChange={this.photoChange}
+                updateImage={this.updateImage}/>
       </div>
     );
   }
