@@ -14,8 +14,7 @@ class GalleryList extends Component{
             { this.props.list.map((image) => 
                 <GalleryItem 
                             image={image} key={image.id}
-                            photoChange={this.props.photoChange}
-                            updateImage={this.updateImage}/>
+                            getImages={this.props.getImages}/>
                 )
             }
             </div>
