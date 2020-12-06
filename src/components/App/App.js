@@ -7,7 +7,7 @@ class App extends Component {
 
 state = {
   imageList: [], // at this point, imageList array has no data
-  liked: false // boolean 
+  unliked: false // boolean created 
 }
 
 // readyNow function, start of react life cycle
