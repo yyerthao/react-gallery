@@ -44,9 +44,11 @@ state = {
 
   render() {
     return (
+
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Yer's Travel Gallery</h1>
+          <h1 className="App-title">Yer's Nature Gallery</h1>
+          <p className="header-p">"We travel not to escape life, but for life not to escape us..."</p>
         </header>
         <p>&nbsp;{/* INSERT QUOTE HERE LATER */}</p>
         
@@ -56,8 +58,13 @@ state = {
                 photoChange={this.photoChange}
                 getImages={this.getImages}/>
       </div>
+      
     );
   }
 }
 
 export default App;
+
+
+// prop carries over objects/arrays/functions over to child components
+// on the other side, we must receive it with this.props.Xname

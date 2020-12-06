@@ -48,6 +48,7 @@ class GalleryItem extends Component {
                     : <p className="img-btn">{this.props.image.description}</p> // falsy value 
                     }
                 <p>
+                    {/* nested ternary operator */}
                     {
                     (this.props.image.likes === 0)
                     ? 'No one likes this'
@@ -70,9 +71,6 @@ class GalleryItem extends Component {
 export default GalleryItem;
 
 
-
-// - When the like button is clicked, use `Axios` to update (`PUT`) the like count `/gallery/like/:id`.
-// Utilized this link to see if I could run two functions in 1 onClick    
-// https://stackoverflow.com/questions/26069238/call-multiple-functions-onclick-reactjs
 // get like button to connect to put route, counter already done
 // button on image to toggle to description
+// https: //medium.com/javascript-scene/nested-ternaries-are-great-361bddd0f340

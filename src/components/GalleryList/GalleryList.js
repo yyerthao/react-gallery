@@ -18,7 +18,6 @@ class GalleryList extends Component{
                 )
             }
             </div>
-
         </>
         ) // end return
     } // end render
