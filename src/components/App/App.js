@@ -7,7 +7,7 @@ class App extends Component {
 
 state = {
   imageList: [], // at this point, imageList array has no data
-  unliked: false, // boolean created 
+  unliked: true, // boolean created 
 
 }
 
@@ -46,14 +46,11 @@ state = {
    photoChange= () => {
     console.log('Liked a photo');
     this.setState({
-      liked: true
+      liked: false
 
     })
   }
 
-  countLikes = () => {
-    console.log('Counting likes');
-  }
 
   render() {
     return (
@@ -67,8 +64,7 @@ state = {
         {/* GalleryList is a component, list is our prop, it is taco.. we are storing our imageList into this prop variable, 
         at this point, imageList already has our galleryItems array of photo data in it..*/}
         <GalleryList list={this.state.imageList}
-                photoChange={this.photoChange}
-                countLikes={this.countLikes}/>
+                photoChange={this.photoChange}/>
                 </div>
       </div>
     );
