@@ -47,8 +47,9 @@ state = {
 
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Yer's Nature Gallery</h1>
+          <h1 className="App-title">Yer's Travel Gallery</h1>
           <p className="header-p">"We travel not to escape life, but for life not to escape us..."</p>
+          
         </header>
         <p>&nbsp;{/* INSERT QUOTE HERE LATER */}</p>
         

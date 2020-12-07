@@ -11,7 +11,7 @@ class GalleryItem extends Component {
         displayPic: true,
     }
 
-    // this is a function, will set the state of unmasked to be flipped
+    // this is a function, will set the state of displayPic to be flipped
     toggleImage = () => {
         console.log('Toggling like button'); // logging to ensure button is working X
         this.setState(({ // setting state of key displayPic to a flipped boolean
@@ -59,6 +59,7 @@ class GalleryItem extends Component {
                 </p>
                 </div>
                 <button onClick={this.handleLike}>Like</button>
+                <button>Unlike</button>
 
             </div>
 
