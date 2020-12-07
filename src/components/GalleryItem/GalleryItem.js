@@ -59,7 +59,7 @@ class GalleryItem extends Component {
                 </p>
                 </div>
                 <button onClick={this.handleLike}>Like</button>
-                <button>Unlike</button>
+                {/* <button>Unlike</button> */}
 
             </div>
 
