@@ -56,7 +56,6 @@ state = {
         {/* GalleryList is a component, list is our prop, it is taco.. we are storing our imageList into this prop variable, 
         at this point, imageList already has our galleryItems array of photo data in it..*/}
         <GalleryList list={this.state.imageList}
-                photoChange={this.photoChange}
                 getImages={this.getImages}/>
       </div>
       

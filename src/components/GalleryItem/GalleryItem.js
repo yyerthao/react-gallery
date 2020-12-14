@@ -34,7 +34,6 @@ class GalleryItem extends Component {
 
 
   render() {
-
     return (
         <>  
             <div className="outer-div">
