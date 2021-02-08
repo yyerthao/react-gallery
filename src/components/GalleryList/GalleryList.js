@@ -24,16 +24,3 @@ class GalleryList extends Component{
 } // end classs
 
 export default GalleryList;
-
-/*
-
-- get something from /gallery
-- go to server.js with axios
-- find /gallery, and see if it's a GET OR USE
-- since it's a USE, must search through gallery router file for specific GET /gallery
-       - app.use('/gallery', gallery);
-- go to const gallery = require('./routes/gallery.router.js');
-- 
-- 
-- 
-*/
