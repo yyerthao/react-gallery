@@ -12,15 +12,20 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import Grid from "@material-ui/core/Grid"
+// import Paper from "@material-ui/core/Paper"
 
-const styles = {
+const styles = theme => ({
   card: {
     maxWidth: 500,
   },
   media: {
     height: 200,
   },
-};
+  gridContainer: {
+    paddingLeft: "40px",
+    paddingRight: "40px",
+  },
+});
 
 
 class GalleryItem extends Component {
@@ -70,46 +75,94 @@ class GalleryItem extends Component {
             {this.state.displayPic ? (
               // <img src={this.props.image.path} alt="Yer's Photos"></img>
               <div>
-               <Grid
-                        container
-                        spacing={4}
-                        className={classes.gridContainer}
-                        justify="center"
-                      >
-                        <Grid item xs={12} sm={6} md={4}>
-                          <Card className={classes.card}>
-                              <CardActionArea>
-                                  <CardMedia
-                                  className={classes.media}
-                                  image={this.props.image.path}
-                                  alt="Yer's Photos"
-                                  />
-                                  <CardContent>
-                                  <Typography gutterBottom variant="h5" component="h2">
+                <Grid
+                  container
+                  spacing={4}
+                  className={classes.gridContainer}
+                  justify="center"
+                >
+                  <Grid item xs={12} sm={6} md={4}>
+                    <Card className={classes.card}>
+                      <CardActionArea>
+                        <CardMedia
+                          className={classes.media}
+                          image={this.props.image.path}
+                          alt="Yer's Photos"
+                        />
+                        <CardContent>
+                          {/* <Typography gutterBottom variant="h5" component="h2">
                                       Destination Photo
-                                  </Typography>
-                                  <Typography component="p">
-                                      TEXT WILL GO HERE 
-                                  </Typography>
-                                  </CardContent>
-                              </CardActionArea>
-                              <CardActions>
-                                  <Button size="small" color="primary" onClick={this.handleLike}>
-                                  Like
-                                  </Button>
-                                  <Button size="small" color="primary" onClick={this.handleUnlike}>
-                                  Unlike
-                                  </Button>
-                              </CardActions>
-                              </Card>
-                        </Grid>
+                                  </Typography> */}
+                          <Typography component="p">
+                                      Click for description
+                            </Typography>
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions>
+                        <Button
+                          size="small"
+                          color="primary"
+                          onClick={this.handleLike}
+                        >
+                          Like
+                        </Button>
+                        <Button
+                          size="small"
+                          color="primary"
+                          onClick={this.handleUnlike}
+                        >
+                          Unlike
+                        </Button>
+                      </CardActions>
+                    </Card>
                   </Grid>
-                  
+                </Grid>
               </div>
-
-
             ) : (
-              <p className="img-btn">{this.props.image.description}</p>
+              <div>
+                <Grid
+                  container
+                  spacing={4}
+                  className={classes.gridContainer}
+                  justify="center"
+                >
+                  <Grid item xs={12} sm={6} md={4}>
+                    <Card className={classes.card}>
+                      <CardActionArea>
+                        <CardMedia
+                          className={classes.media}
+                          image={this.props.image.path}
+                          alt="Yer's Photos"
+                        />
+                        <CardContent>
+                          <Typography gutterBottom variant="h5" component="h2">
+                            {this.props.image.description}
+                          </Typography>
+                          {/* <Typography component="p">
+                                      TEXT WILL GO HERE 
+                                  </Typography> */}
+                        </CardContent>
+                      </CardActionArea>
+                      <CardActions>
+                        <Button
+                          size="small"
+                          color="primary"
+                          onClick={this.handleLike}
+                        >
+                          Like
+                        </Button>
+                        <Button
+                          size="small"
+                          color="primary"
+                          onClick={this.handleUnlike}
+                        >
+                          Unlike
+                        </Button>
+                      </CardActions>
+                    </Card>
+                  </Grid>
+                </Grid>
+              </div>
             )}
             <p>
               {this.props.image.likes === 0
