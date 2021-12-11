@@ -70,7 +70,6 @@ class GalleryItem extends Component {
     const { classes } = this.props;
     return (
       <>
-        <div className="outer-div">
           <div onClick={this.toggleImage}>
             {this.state.displayPic ? (
               // <img src={this.props.image.path} alt="Yer's Photos"></img>
@@ -90,12 +89,10 @@ class GalleryItem extends Component {
                           alt="Yer's Photos"
                         />
                         <CardContent>
-                          {/* <Typography gutterBottom variant="h5" component="h2">
-                                      Destination Photo
-                                  </Typography> */}
+                          <Typography gutterBottom variant="h5" component="h2">
+                          </Typography>
                           <Typography component="p">
-                                      Click for description
-                            </Typography>
+                          </Typography>
                         </CardContent>
                       </CardActionArea>
                       <CardActions>
@@ -114,6 +111,11 @@ class GalleryItem extends Component {
                           Unlike
                         </Button>
                       </CardActions>
+                    {this.props.image.likes === 0
+                      ? "No one likes this"
+                      : this.props.image.likes === 1
+                      ? "1 person likes this"
+                      : `${this.props.image.likes} people like this`}
                     </Card>
                   </Grid>
                 </Grid>
@@ -138,9 +140,8 @@ class GalleryItem extends Component {
                           <Typography gutterBottom variant="h5" component="h2">
                             {this.props.image.description}
                           </Typography>
-                          {/* <Typography component="p">
-                                      TEXT WILL GO HERE 
-                                  </Typography> */}
+                          <Typography component="p">
+                            </Typography>
                         </CardContent>
                       </CardActionArea>
                       <CardActions>
@@ -159,20 +160,25 @@ class GalleryItem extends Component {
                           Unlike
                         </Button>
                       </CardActions>
+                        {this.props.image.likes === 0
+                          ? "No one likes this"
+                          : this.props.image.likes === 1
+                          ? "1 person likes this"
+                          : `${this.props.image.likes} people like this`}
+
                     </Card>
                   </Grid>
                 </Grid>
               </div>
             )}
-            <p>
+            {/* <p>
               {this.props.image.likes === 0
                 ? "No one likes this"
                 : this.props.image.likes === 1
                 ? "1 person likes this"
                 : `${this.props.image.likes} people like this`}
-            </p>
+            </p> */}
           </div>
-        </div>
       </>
     );
   }
