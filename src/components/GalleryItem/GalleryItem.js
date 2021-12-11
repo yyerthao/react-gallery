@@ -135,6 +135,7 @@ class GalleryItem extends Component {
                   <Card className={classes.card}>
                     <CardActionArea>
                       <CardMedia
+                      // comment
                         onClick={this.toggleImage}
                         className={classes.media}
                         image={this.props.image.path}
