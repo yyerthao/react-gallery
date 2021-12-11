@@ -6,11 +6,25 @@ const galleryItems = require('../modules/gallery.data');
 
 // PUT Route
 router.put('/like/:id', (req, res) => {
-    console.log(req.params);
+    console.log(req.params, 'testing');
     const galleryId = req.params.id;
     for(const galleryItem of galleryItems) {
         if(galleryItem.id == galleryId) {
             galleryItem.likes += 1;
+        }
+    }
+    res.sendStatus(200);
+}); // END PUT Route
+
+// PUT Route
+router.put('/unlike/:id', (req, res) => {
+    console.log(req.params, 'testing');
+    const galleryId = req.params.id;
+    for(const galleryItem of galleryItems) {
+        if(galleryItem.id == galleryId && galleryItem.likes >0) {
+                galleryItem.likes -= 1;
+        } else if (galleryItem.id == galleryId && galleryItem.likes < 0){
+                galleryItem.likes === 0;
         }
     }
     res.sendStatus(200);

@@ -7,9 +7,6 @@ class GalleryList extends Component{
     render(){
         return(
         <>
-        {/* list (contains imageList array) gets pass through from parent App.js*/}
-        {/* map is a functions method, sort of like a for loop, which utilizes a taco, 
-        in this case, image, to iterate through the our imageList array to render to DOM*/}
             <div className="container">
             { this.props.list.map((image) => 
                 <GalleryItem 
@@ -19,8 +16,8 @@ class GalleryList extends Component{
             }
             </div>
         </>
-        ) // end return
-    } // end render
-} // end classs
+        ) 
+    } 
+} 
 
 export default GalleryList;
