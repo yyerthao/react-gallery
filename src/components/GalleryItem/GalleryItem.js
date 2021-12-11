@@ -70,115 +70,117 @@ class GalleryItem extends Component {
     const { classes } = this.props;
     return (
       <>
-          <div onClick={this.toggleImage}>
-            {this.state.displayPic ? (
-              // <img src={this.props.image.path} alt="Yer's Photos"></img>
-              <div>
-                <Grid
-                  container
-                  spacing={4}
-                  className={classes.gridContainer}
-                  justify="center"
-                >
-                  <Grid item xs={12} sm={6} md={4}>
-                    <Card className={classes.card}>
-                      <CardActionArea>
-                        <CardMedia
-                          className={classes.media}
-                          image={this.props.image.path}
-                          alt="Yer's Photos"
-                        />
-                        <CardContent>
-                          <Typography gutterBottom variant="h5" component="h2">
-                          </Typography>
-                          <Typography component="p">
-                          </Typography>
-                        </CardContent>
-                      </CardActionArea>
-                      <CardActions>
-                        <Button
-                          size="small"
-                          color="primary"
-                          onClick={this.handleLike}
-                        >
-                          Like
-                        </Button>
-                        <Button
-                          size="small"
-                          color="primary"
-                          onClick={this.handleUnlike}
-                        >
-                          Unlike
-                        </Button>
-                      </CardActions>
+        <div>
+          {this.state.displayPic ? (
+            // <img src={this.props.image.path} alt="Yer's Photos"></img>
+            <div>
+              <Grid
+                container
+                spacing={4}
+                className={classes.gridContainer}
+                justify="center"
+              >
+                <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardActionArea>
+                      <CardMedia
+                        onClick={this.toggleImage}
+                        className={classes.media}
+                        image={this.props.image.path}
+                        alt="Yer's Photos"
+                      />
+                      <CardContent>
+                        <Typography
+                          gutterBottom
+                          variant="h5"
+                          component="h2"
+                        ></Typography>
+                        <Typography component="p"></Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <Button
+                        size="small"
+                        color="primary"
+                        onClick={this.handleLike}
+                      >
+                        Like
+                      </Button>
+                      <Button
+                        size="small"
+                        color="primary"
+                        onClick={this.handleUnlike}
+                      >
+                        Unlike
+                      </Button>
+                    </CardActions>
                     {this.props.image.likes === 0
                       ? "No one likes this"
                       : this.props.image.likes === 1
                       ? "1 person likes this"
                       : `${this.props.image.likes} people like this`}
-                    </Card>
-                  </Grid>
+                  </Card>
                 </Grid>
-              </div>
-            ) : (
-              <div>
-                <Grid
-                  container
-                  spacing={4}
-                  className={classes.gridContainer}
-                  justify="center"
-                >
-                  <Grid item xs={12} sm={6} md={4}>
-                    <Card className={classes.card}>
-                      <CardActionArea>
-                        <CardMedia
-                          className={classes.media}
-                          image={this.props.image.path}
-                          alt="Yer's Photos"
-                        />
-                        <CardContent>
-                          <Typography gutterBottom variant="h5" component="h2">
-                            {this.props.image.description}
-                          </Typography>
-                          <Typography component="p">
-                            </Typography>
-                        </CardContent>
-                      </CardActionArea>
-                      <CardActions>
-                        <Button
-                          size="small"
-                          color="primary"
-                          onClick={this.handleLike}
-                        >
-                          Like
-                        </Button>
-                        <Button
-                          size="small"
-                          color="primary"
-                          onClick={this.handleUnlike}
-                        >
-                          Unlike
-                        </Button>
-                      </CardActions>
-                        {this.props.image.likes === 0
-                          ? "No one likes this"
-                          : this.props.image.likes === 1
-                          ? "1 person likes this"
-                          : `${this.props.image.likes} people like this`}
-
-                    </Card>
-                  </Grid>
+              </Grid>
+            </div>
+          ) : (
+            <div>
+              <Grid
+                container
+                spacing={4}
+                className={classes.gridContainer}
+                justify="center"
+              >
+                <Grid item xs={12} sm={6} md={4}>
+                  <Card className={classes.card}>
+                    <CardActionArea>
+                      <CardMedia
+                        onClick={this.toggleImage}
+                        className={classes.media}
+                        image={this.props.image.path}
+                        alt="Yer's Photos"
+                      />
+                      <CardContent>
+                        <Typography gutterBottom variant="h5" component="h2">
+                          {this.props.image.description}
+                        </Typography>
+                        <Typography component="p"></Typography>
+                      </CardContent>
+                    </CardActionArea>
+                    <CardActions>
+                      <Button
+                        size="small"
+                        color="primary"
+                        onClick={this.handleLike}
+                      >
+                        Like
+                      </Button>
+                      <Button
+                        size="small"
+                        color="primary"
+                        onClick={this.handleUnlike}
+                      >
+                        Unlike
+                      </Button>
+                    </CardActions>
+                    {this.props.image.likes === 0
+                      ? "No one likes this"
+                      : this.props.image.likes === 1
+                      ? "1 person likes this"
+                      : `${this.props.image.likes} people like this`}
+                  </Card>
                 </Grid>
-              </div>
-            )}
-            {/* <p>
+              </Grid>
+            </div>
+          )}
+          {/* <p>
               {this.props.image.likes === 0
                 ? "No one likes this"
                 : this.props.image.likes === 1
                 ? "1 person likes this"
                 : `${this.props.image.likes} people like this`}
             </p> */}
-          </div>
+        </div>
       </>
     );
   }
